@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VentasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/prueba', function () {
+Route::get('/prueba2', function () {
     return view('welcome');
 });
+
+Route::get('/prueba3', [VentasController::class, 'listar'] );
