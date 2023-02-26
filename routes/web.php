@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VentasController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +14,14 @@ use App\Http\Controllers\VentasController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/prueba2', function () {
     return view('welcome');
 });
 
 Route::get('/prueba3', [VentasController::class, 'listar'] );
+
+Route::get('/cursos/{nombre}', [VentasController::class, 'listar4'] );
