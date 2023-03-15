@@ -6,8 +6,17 @@ services:
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_ROOT_PASSWORD=root_pass_change
       - MARIADB_USER=bn_myapp
       - MARIADB_DATABASE=bitnami_myapp
+  phpmyadmin:
+    image: docker.io/phpmyadmin
+    ports:
+      - '8080:80'
+    environment:
+      #- MYSQL_ROOT_PASSWORD=root_pass_change
+      #- PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
   myapp:
     image: docker.io/bitnami/laravel:10
     ports:
