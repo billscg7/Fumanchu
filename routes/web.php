@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PeliculaController;
+use App\Http\Controllers\GeneroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
 
-Route::get('pelicula',[PeliculaController::class,'index']);
+Route::get('generos',[GeneroController::class,'index'])->name('generos.index');
+Route::get('generos/create',[PeliculaController::class,'create'])->name('generos.create');

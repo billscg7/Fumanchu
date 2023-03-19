@@ -1,3 +1,4 @@
+
 <table>
     <thead>
         
@@ -5,12 +6,12 @@
     <tbody>
         
        <section>
-        <h1>Bienvenidos al menu generos</h1>
+        <h1>Bienvenidos a las peliculas del genero: _________</h1>
        </section>
 
-           @foreach($generos as $genero)
+           @foreach($peliculas as $pelicula)
             <li>
-                <a href="{{route('generos.create')}}">{{$genero->name}}</a>
+               {{$pelicula->title}}
             </li>
             @endforeach
          
