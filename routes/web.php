@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('welcome');});
 
 Route::get('generos',[GeneroController::class,'index'])->name('generos.index');
-Route::get('generos/create',[PeliculaController::class,'create'])->name('generos.create');
+Route::get('generos/{id}',[PeliculaController::class,'create'])->name('generos.create');

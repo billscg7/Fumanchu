@@ -10,7 +10,7 @@ class Pelicula extends Model
     use HasFactory;
 
     public function generos(){
-        return $this->belongsTo(Genero::class, 'id_genero');
+        return $this->belongsTo(Genero::class);
 
     }
 }

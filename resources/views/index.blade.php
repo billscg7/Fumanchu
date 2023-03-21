@@ -10,7 +10,7 @@
 
            @foreach($generos as $genero)
             <li>
-                <a href="{{route('generos.create')}}">{{$genero->name}}</a>
+                <a href="{{route('generos.create', $genero->id)}}">{{$genero->name}}</a>
             </li>
             @endforeach
          

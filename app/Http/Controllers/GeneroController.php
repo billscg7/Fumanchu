@@ -10,7 +10,7 @@ class GeneroController extends Controller
     public function index(){
 
         $generos = Genero::all();
-
+            
 
         return view('index',compact("generos"));
 
